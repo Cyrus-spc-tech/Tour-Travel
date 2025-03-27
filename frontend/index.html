@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book amazing tours, attractions, and activities worldwide with TravelKlook">
+    <title>D4Travel - Activity Booking Platform</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.pexels.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+            <h1><a href="#" aria-label="TravelKlook home">D4 Travel</a></h1>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-links">
+            <a href="#destinations" aria-current="page">Destinations</a>
+            <a href="#activities">Activities</a>
+            <a href="#deals">Deals</a>
+            <a href="#about">About</a>
+        </div>
+        
+        <div class="auth-buttons">
+            <div class="user-dropdown">
+                <button class="user-avatar" aria-label="User menu" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#">My Profile</a>
+                    <a href="#">My Bookings</a>
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
+            <button class="login-btn">Log In</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
+            <h2 id="hero-heading">Discover Amazing Experiences</h2>
+            <p>Book tours, attractions, and activities worldwide</p>
+            
+            <div class="search-container" role="search">
+                <div class="search-tabs" role="tablist">
+                    <button role="tab" aria-selected="true" aria-controls="activities-tab">Activities</button>
+                    <button role="tab" aria-selected="false" aria-controls="attractions-tab">Attractions</button>
+                    <button role="tab" aria-selected="false" aria-controls="tours-tab">Tours</button>
+                </div>
+                <div class="search-box">
+                    <div class="search-field">
+                        <label for="destination">Where are you going?</label>
+                        <input type="text" id="destination" placeholder="City or destination" required>
+                    </div>
+                    <div class="search-field">
+                        <label for="travel-date">When?</label>
+                        <input type="date" id="travel-date" aria-describedby="date-format">
+                        <span id="date-format" class="visually-hidden">Format: MM/DD/YYYY</span>
+                    </div>
+                    <div class="search-field">
+                        <label for="travelers">Travelers</label>
+                        <select id="travelers">
+                            <option value="1">1 traveler</option>
+                            <option value="2">2 travelers</option>
+                            <option value="3">3 travelers</option>
+                            <option value="4">4 travelers</option>
+                            <option value="5+">5+ travelers</option>
+                        </select>
+                    </div>
+                    <button class="search-btn" aria-label="Search activities">
+                        <span class="btn-text">Search</span>
+                        <span class="spinner hidden" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <!-- Popular Destinations -->
+        <section id="destinations" class="popular-destinations" aria-labelledby="destinations-heading">
+            <div class="section-header">
+                <h3 id="destinations-heading">Popular Destinations</h3>
+                <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="https://images.pexels.com/photos/164336/pexels-photo-164336.jpeg" 
+                         alt="Bangkok skyline with temples" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="destination-info">
+                        <h4>Bangkok</h4>
+                        <p>1,234 activities</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg" 
+                         alt="Tokyo cityscape with Skytree" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="destination-info">
+                        <h4>Tokyo</h4>
+                        <p>987 activities</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.pexels.com/photos/774016/pexels-photo-774016.jpeg" 
+                         alt="Marina Bay Sands in Singapore" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="destination-info">
+                        <h4>Singapore</h4>
+                        <p>1,567 activities</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.pexels.com/photos/2376086/pexels-photo-2376086.jpeg" 
+                         alt="N Seoul Tower at night" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="destination-info">
+                        <h4>Seoul</h4>
+                        <p>876 activities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Activities -->
+        <section id="activities" class="featured-activities" aria-labelledby="activities-heading">
+            <div class="section-header">
+                <h3 id="activities-heading">Featured Activities</h3>
+                <div class="activity-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Adventure</button>
+                    <button class="filter-btn">Cultural</button>
+                    <button class="filter-btn">Family</button>
+                    <button class="filter-btn">Nature</button>
+                </div>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card" data-category="family">
+                    <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg" 
+                         alt="Theme park attraction" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="activity-info">
+                        <h4>Universal Studios Singapore</h4>
+                        <div class="rating" aria-label="Rated 4.5 out of 5 stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(1,234 reviews)</span>
+                        </div>
+                        <p class="price">From $56.00</p>
+                        <button class="book-btn">
+                            <span class="btn-text">Book Now</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="family">
+                    <img src="https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg" 
+                         alt="Disney theme park" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="activity-info">
+                        <h4>Tokyo Disneyland Ticket</h4>
+                        <div class="rating" aria-label="Rated 4.5 out of 5 stars">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(2,345 reviews)</span>
+                        </div>
+                        <p class="price">From $72.00</p>
+                        <button class="book-btn">
+                            <span class="btn-text">Book Now</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="cultural">
+                    <img src="https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg" 
+                         alt="Floating market" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="activity-info">
+                        <h4>Bangkok Floating Market Tour</h4>
+                        <div class="rating" aria-label="Rated 5 out of 5 stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(876 reviews)</span>
+                        </div>
+                        <p class="price">From $32.00</p>
+                        <button class="book-btn">
+                            <span class="btn-text">Book Now</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="cultural">
+                    <img src="https://images.pexels.com/photos/2376086/pexels-photo-2376086.jpeg" 
+                         alt="City tower view" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="activity-info">
+                        <h4>N Seoul Tower Ticket</h4>
+                        <div class="rating" aria-label="Rated 4 out of 5 stars">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(543 reviews)</span>
+                        </div>
+                        <p class="price">From $18.00</p>
+                        <button class="book-btn">
+                            <span class="btn-text">Book Now</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="adventure">
+                    <img src="https://images.pexels.com/photos/2386318/pexels-photo-2386318.jpeg" 
+                         alt="Zip lining adventure" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="activity-info">
+                        <h4>Jungle Zip Lining Adventure</h4>
+                        <div class="rating" aria-label="Rated 5 out of 5 stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(321 reviews)</span>
+                        </div>
+                        <p class="price">From $45.00</p>
+                        <button class="book-btn">
+                            <span class="btn-text">Book Now</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="nature">
+                    <img src="https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg" 
+                         alt="Hiking trail" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="activity-info">
+                        <h4>National Park Guided Hike</h4>
+                        <div class="rating" aria-label="Rated 4.5 out of 5 stars">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(654 reviews)</span>
+                        </div>
+                        <p class="price">From $28.00</p>
+                        <button class="book-btn">
+                            <span class="btn-text">Book Now</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Deals -->
+        <section id="deals" class="special-deals" aria-labelledby="deals-heading">
+            <div class="section-header">
+                <h3 id="deals-heading">Special Deals</h3>
+                <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-badge">20% OFF</div>
+                    <img src="https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg" 
+                         alt="Dinner cruise experience" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="deal-info">
+                        <h4>Sunset Dinner Cruise</h4>
+                        <div class="deal-price">
+                            <span class="original-price">$120.00</span>
+                            <span class="discounted-price">$96.00</span>
+                        </div>
+                        <button class="deal-btn">
+                            <span class="btn-text">Book Deal</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-badge">LIMITED TIME</div>
+                    <img src="https://images.pexels.com/photos/2901215/pexels-photo-2901215.jpeg" 
+                         alt="City tour experience" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="deal-info">
+                        <h4>City Highlights Tour</h4>
+                        <div class="deal-price">
+                            <span class="original-price">$75.00</span>
+                            <span class="discounted-price">$60.00</span>
+                        </div>
+                        <button class="deal-btn">
+                            <span class="btn-text">Book Deal</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-badge">FLASH SALE</div>
+                    <img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg" 
+                         alt="Snorkeling adventure" 
+                         loading="lazy"
+                         width="300"
+                         height="200">
+                    <div class="deal-info">
+                        <h4>Snorkeling Adventure</h4>
+                        <div class="deal-price">
+                            <span class="original-price">$65.00</span>
+                            <span class="discounted-price">$45.50</span>
+                        </div>
+                        <button class="deal-btn">
+                            <span class="btn-text">Book Deal</span>
+                            <span class="spinner hidden" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" aria-labelledby="footer-heading">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 id="footer-heading">Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">North America</a></li>
+                    <li><a href="#">Oceania</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h5>Get the best deals</h5>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 TravelKlook. All rights reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa" aria-label="Visa"></i>
+                <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
+                <i class="fab fa-cc-paypal" aria-label="PayPal"></i>
+                <i class="fab fa-cc-apple-pay" aria-label="Apple Pay"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
