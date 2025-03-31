@@ -39,6 +39,7 @@
     const password=document.getElementById('rPassword').value;
     const firstName=document.getElementById('fName').value;
     const lastName=document.getElementById('lName').value;
+    var emaill=document.getElementById('emall').value;
 
     const auth=getAuth();
     const db=getFirestore();
@@ -87,6 +88,8 @@
         localStorage.setItem('loggedInUserId', user.uid);
         window.location.href='index1.html';
     })
+    console.log(emaill.innerHTML(email))
+
     .catch((error)=>{
         const errorCode=error.code;
         if(errorCode==='auth/invalid-credential'){
